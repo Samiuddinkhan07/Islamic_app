@@ -1,15 +1,21 @@
 
-
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom'
 import './App.css'
+import DashBoard from './App/Components/DashBoard/DashBoard';
+import Homepage from './App/Pages/Homepage/Homepage';
 
 function App() {
 
   return (
     <>
-     <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    </>
+    <Router>
+      <Routes>
+        <Route path='/' element={<DashBoard/>} exact>
+          <Route path='/' element={<Homepage/>} exact></Route>
+        </Route>
+      </Routes>
+    </Router>
+    </>  
   )
 }
 

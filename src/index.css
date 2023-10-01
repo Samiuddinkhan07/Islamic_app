@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background-color: #21272C;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color:#B1A7A6;
+    font-family:'Unbounded', sans-serif;
+}
+
+*{
+    font-family: 'Space Grotesk',sans-serif;
+    color: #F5F3F4;
+}
+
+span,div,a,p{
+    color:#FFFFFF;
+}
