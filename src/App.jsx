@@ -5,6 +5,7 @@ import DashBoard from './App/Components/DashBoard/DashBoard';
 import Homepage from './App/Pages/Homepage/Homepage';
 import Quran from './App/Pages/Quran/Quran';
 
+
 function App() {
 
   return (
@@ -16,7 +17,11 @@ function App() {
           </Route>
           <Route path="/Quran" element={<Quran/>} exact></Route>
         </Route>
+      
+      
+        
       </Routes>
+      
     </Router>
     </>  
   )

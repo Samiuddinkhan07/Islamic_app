@@ -1,7 +1,24 @@
 import TextTransition,{presets} from "react-text-transition";
 import {useState,useEffect} from 'react';
-
+import { Card } from "../../Components/Card/Card";
+import Footer from '../../Components/Footer/Footer'
 const Homepage = () => {
+    const CardObj = [
+        {
+            img:"./Assets/hadees.jpg",
+            Title:"Hadiths Hub",
+            Description:"Immerse yourself in the teachings of the Prophet Muhammad (PBUH) and gain insights into the islamic way of life.Grow in charecter and virtue every single day.",
+        },  {
+            img:"./Assets/quran.jpg",
+            Title:"Quranic Verses",
+            Description:"Revel in the beauty of the holy Quran's divine verses and deepen your understanding of Islam.Discover the miraculous words of our Creator,shedding light on life's most pressing questions.",
+        },
+        {
+            img:"./Assets/prayer timing.jpg",
+            Title:"Prayer Info",
+            Description:"Timely,accurate,and reliable prayer information-never miss an opportunity to converse with the Almighty and seek His infinite wiadom and blessings.",
+        }
+    ]
     const [textIndex,setTextIndex] =  useState(0);
     const textArr = ["Quran","Hadits","Prayer"]
     const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
@@ -70,6 +87,12 @@ const Homepage = () => {
                 <button className="bg-[#F5F3F4] text-[#161A1D] px-2 py-2 rounded">Learn More</button>
             </div>
         </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {CardObj.map((elem) =>{
+           return <Card title={elem.Title} description={elem.Description} img={elem.img} />
+        })}
+        </div>
+        <Footer/>
     </div>
   )
 }
